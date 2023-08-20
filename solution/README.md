@@ -2,7 +2,7 @@ Command for first step: docker run --name infracloud -d infracloudio/csvserver:l
 Container got exited due to missing file in /csvserver/inputdata directory inside container. This could be found using docker logs for the container id or name.
 gencsv.sh file was written to generate a random inputFile.
 inputFile generated was then mounted to the new container after deleting the old container using command
-docker run --name infracloud -d -v /root/csvserver/inputFile:/csvserver/inputdata infracloudio/csvserver:latest
+docker run --name infracloud -d -v /root/Infracloud/InfraCloudTest/solution/inputFile:/csvserver/inputdata infracloudio/csvserver:latest
 Get the shell access to the container using below:
 docker exec -it infracloud bash
 Get the listen port by running below command from inside container:
